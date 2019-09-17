@@ -14,8 +14,12 @@
 
 #echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
 
+if [ -z $1 ]; then
+    echo "Help: Please enter your search terms after the script to generate a word cloud";
+else
 esearch -db pubmed -query "$1 $2 $3" |   efetch -format abstract > pubmed.txt
 
-pip install wordcloud
+#pip install wordcloud
 
-wordcloud_cli --text pubmed.txt --imagefile wordcloud.png
+wordcloud_cli --text pubmed.txt --imagefile wordcloud.png;
+fi
