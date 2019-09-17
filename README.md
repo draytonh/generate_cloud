@@ -1,6 +1,7 @@
 # generate_cloud
 #Make a word cloud out of the contents of abstracts from Pubmed
 
+'''
 #!/usr/bin/bash
 #perl -MNet::FTP -e \
    # '$ftp = new Net::FTP("ftp.ncbi.nlm.nih.gov", Passive => 1);
@@ -23,3 +24,4 @@ esearch -db pubmed -query "$1 $2 $3" |   efetch -format abstract > pubmed.txt
 
 wordcloud_cli --text pubmed.txt --imagefile wordcloud.png;
 fi
+'''
